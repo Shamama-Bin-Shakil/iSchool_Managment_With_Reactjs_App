@@ -52,7 +52,7 @@ export default contactSlice.reducer;
 export const getContact = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/viewer/getcontact`, {
+    const res = await fetch(`/api/v1/viewer/getcontact`, {
       method: "GET",
       credentials: "include",
     });
@@ -73,7 +73,7 @@ export const statusContact = (id, status) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/viewer/status/getcontact/${id}`,
+      `/api/v1/viewer/status/getcontact/${id}`,
       {
         method: "POST",
         credentials: "include",
@@ -101,7 +101,7 @@ export const deleteContact = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/viewer/deletecontact/${id}`,
+      `/api/v1/viewer/deletecontact/${id}`,
       {
         method: "DELETE",
         credentials: "include",

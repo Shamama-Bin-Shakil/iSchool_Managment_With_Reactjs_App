@@ -40,7 +40,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     const response = await fetch(
-      "http://localhost:8080/api/v1/viewer/contact",
+      "/api/v1/viewer/contact",
       {
         method: "POST",
         headers: { "content-type": "application/json" },

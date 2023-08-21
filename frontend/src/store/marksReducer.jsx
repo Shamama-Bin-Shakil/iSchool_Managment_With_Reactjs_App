@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-// const baseURL = "http://localhost:8080/api/v1";
+// const baseURL = "/api/v1";
 
 export const marksSlice = createSlice({
   name: "marks",
@@ -57,7 +57,7 @@ export default marksSlice.reducer;
 export const getMarks = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/getmarks`, {
+    const res = await fetch(`/api/v1/admin/getmarks`, {
       method: "GET",
       credentials: "include",
     });
@@ -77,7 +77,7 @@ export const getMarks = () => async (dispatch) => {
 export const getMarksSingleAdmin = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/getmarks/${id}`, {
+    const res = await fetch(`/api/v1/admin/getmarks/${id}`, {
       method: "GET",
       credentials: "include",
     });
@@ -99,7 +99,7 @@ export const getMarksSingle = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/user/getmarkssingle`,
+      `/api/v1/user/getmarkssingle`,
       {
         method: "GET",
         credentials: "include",
@@ -122,7 +122,7 @@ export const statusMarks = (id, status) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/marks/status/${id}`,
+      `/api/v1/admin/marks/status/${id}`,
       {
         method: "POST",
         credentials: "include",

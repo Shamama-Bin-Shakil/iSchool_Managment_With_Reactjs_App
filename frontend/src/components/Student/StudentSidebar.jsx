@@ -14,6 +14,7 @@ import {
   IoNotificationsOutline,
   IoPersonOutline,
   IoRibbonOutline,
+  IoSchoolOutline,
   IoSettingsOutline,
   IoSpeedometerOutline,
 } from "react-icons/io5";
@@ -238,7 +239,7 @@ const AdminSidebar = (props) => {
             >
               <div className="headingWithIcon">
                 <div className="icon">
-                  <IoRibbonOutline />
+                  <IoSchoolOutline />
                 </div>
                 <h4 className="text">Marks</h4>
               </div>

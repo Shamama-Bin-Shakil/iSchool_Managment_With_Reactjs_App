@@ -90,7 +90,6 @@ export const DashboardComponent = styled.section`
         padding: 10px;
         width: 100%;
         height: 100%;
-        /* background-color: red; */
       }
     }
     .RequestChart {
@@ -98,7 +97,7 @@ export const DashboardComponent = styled.section`
       background-color: white;
       border-radius: 20px;
       overflow: hidden;
-      margin: 0 20px;
+      margin-left: 20px;
       .text {
         text-align: center;
         padding: 20px;

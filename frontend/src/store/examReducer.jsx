@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-// const baseURL = "http://localhost:8080/api/v1";
+// const baseURL = "/api/v1";
 
 export const examSlice = createSlice({
   name: "exam",
@@ -75,7 +75,7 @@ export default examSlice.reducer;
 export const createQuestion = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/question`, {
+    const res = await fetch(`/api/v1/admin/question`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify(data),
@@ -101,7 +101,7 @@ export const updateQuestion =
     try {
       dispatch(setLoading(true));
       const res = await fetch(
-        `http://localhost:8080/api/v1/admin/updatequestion/${id}`,
+        `/api/v1/admin/updatequestion/${id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -127,7 +127,7 @@ export const deleteQuestion = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/deletequestion/${id}`,
+      `/api/v1/admin/deletequestion/${id}`,
       {
         method: "DELETE",
         credentials: "include",
@@ -150,7 +150,7 @@ export const deleteQuestion = (id) => async (dispatch) => {
 export const getExamQuestion = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/getquestion`, {
+    const res = await fetch(`/api/v1/admin/getquestion`, {
       method: "GET",
       credentials: "include",
     });
@@ -171,7 +171,7 @@ export const getSingleQuestion = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/getsinglequestion/${id}`,
+      `/api/v1/admin/getsinglequestion/${id}`,
       {
         method: "GET",
         credentials: "include",
@@ -195,7 +195,7 @@ export const createAnswer = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/addsingleanswer`,
+      `/api/v1/admin/addsingleanswer`,
       {
         method: "POST",
         credentials: "include",
@@ -224,7 +224,7 @@ export const updateAnswer =
     try {
       dispatch(setLoading(true));
       const res = await fetch(
-        `http://localhost:8080/api/v1/admin/getsingleanswerupdate/${id}`,
+        `/api/v1/admin/getsingleanswerupdate/${id}`,
         {
           method: "PUT",
           credentials: "include",
@@ -250,7 +250,7 @@ export const getAnswer = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/getsinglequestionanswer/${id}`,
+      `/api/v1/admin/getsinglequestionanswer/${id}`,
       {
         method: "GET",
         credentials: "include",
@@ -276,7 +276,7 @@ export const deleteAnswer = (ansId, questionId) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/getsingleanswerdelete?questionId=${questionId}&ansId=${ansId}`,
+      `/api/v1/admin/getsingleanswerdelete?questionId=${questionId}&ansId=${ansId}`,
       {
         method: "DELETE",
         credentials: "include",
@@ -302,7 +302,7 @@ export const deleteAnswer = (ansId, questionId) => async (dispatch) => {
 export const statusQuestion = (id, status) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/status/${id}`, {
+    const res = await fetch(`/api/v1/admin/status/${id}`, {
       method: "POST",
       credentials: "include",
       body: JSON.stringify({ status }),
@@ -328,7 +328,7 @@ export const getExamPassword = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/user/getexampassword`,
+      `/api/v1/user/getexampassword`,
       {
         method: "GET",
         credentials: "include",
@@ -353,7 +353,7 @@ export const loginExamPassword = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/user/loginexampassword`,
+      `/api/v1/user/loginexampassword`,
       {
         method: "POST",
         credentials: "include",
@@ -379,7 +379,7 @@ export const loginExamPassword = (data) => async (dispatch) => {
 export const getPaper = (course) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/user/getpaper/${course}`, {
+    const res = await fetch(`/api/v1/user/getpaper/${course}`, {
       method: "GET",
       credentials: "include",
     });

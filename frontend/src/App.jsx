@@ -45,7 +45,7 @@ const App = () => {
 
   // Total Visitor
   const totalVisitor = async () => {
-    const response = await fetch("http://localhost:8080/api/v1/admin/visitor", {
+    const response = await fetch("/api/v1/admin/visitor", {
       method: "POST",
     });
     await response.json();

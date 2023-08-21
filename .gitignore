@@ -3,3 +3,5 @@ extra
 compress
 client
 .env
+# Local Netlify folder
+.netlify

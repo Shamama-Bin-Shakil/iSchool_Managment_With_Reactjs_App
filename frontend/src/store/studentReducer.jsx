@@ -64,7 +64,7 @@ export default studentSlice.reducer;
 export const studentLogin = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch("http://localhost:8080/api/v1/user/login", {
+    const res = await fetch("/api/v1/user/login", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
@@ -87,7 +87,7 @@ export const studentLogin = (data) => async (dispatch) => {
 // Load User Logged
 export const studentLoadData = () => async (dispatch) => {
   try {
-    const res = await fetch("http://localhost:8080/api/v1/user/me", {
+    const res = await fetch("/api/v1/user/me", {
       method: "GET",
       credentials: "include",
     });
@@ -111,7 +111,7 @@ export const studentFees = () => async (dispatch, getState) => {
     dispatch(setLoading(true));
 
     const res = await fetch(
-      `http://localhost:8080/api/v1/user/${getState().students.data._id}`,
+      `/api/v1/user/${getState().students.data._id}`,
       {
         method: "GET",
         credentials: "include",
@@ -137,7 +137,7 @@ export const studentProfileUpdate = (data) => async (dispatch) => {
     dispatch(setLoading(true));
 
     const res = await fetch(
-      "http://localhost:8080/api/v1/user/profile/update",
+      "/api/v1/user/profile/update",
       {
         method: "PUT",
         credentials: "include",
@@ -163,7 +163,7 @@ export const studentPasswordUpdate = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      "http://localhost:8080/api/v1/user/password/update",
+      "/api/v1/user/password/update",
       {
         method: "POST",
         credentials: "include",
@@ -189,7 +189,7 @@ export const studentPasswordUpdate = (data) => async (dispatch) => {
 export const studentLogout = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch("http://localhost:8080/api/v1/user/logout", {
+    const res = await fetch("/api/v1/user/logout", {
       method: "GET",
       credentials: "include",
     });

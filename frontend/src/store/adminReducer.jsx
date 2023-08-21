@@ -73,7 +73,7 @@ export default adminSlice.reducer;
 // Load User Logged
 export const userLoadData = () => async (dispatch) => {
   try {
-    const res = await fetch("http://localhost:8080/api/v1/admin/me", {
+    const res = await fetch("/api/v1/admin/me", {
       method: "GET",
       credentials: "include",
     });
@@ -96,7 +96,7 @@ export const adminPasswordUpdate = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      "http://localhost:8080/api/v1/admin/password/update",
+      "/api/v1/admin/password/update",
       {
         method: "POST",
         credentials: "include",
@@ -121,7 +121,7 @@ export const adminPasswordUpdate = (data) => async (dispatch) => {
 export const adminLogin = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch("http://localhost:8080/api/v1/admin/login", {
+    const res = await fetch("/api/v1/admin/login", {
       method: "POST",
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" },
@@ -149,7 +149,7 @@ export const adminProfileUpdate = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      "http://localhost:8080/api/v1/admin/profile/update",
+      "/api/v1/admin/profile/update",
       {
         method: "POST",
         credentials: "include",
@@ -177,7 +177,7 @@ export const adminUserProfileUpdate = (id, data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/user/profile/update/${id}`,
+      `/api/v1/admin/user/profile/update/${id}`,
       {
         method: "POST",
         body: JSON.stringify(data),
@@ -205,7 +205,7 @@ export const createStudent = (data) => async (dispatch) => {
     dispatch(setLoading(true));
 
     const res = await fetch(
-      "http://localhost:8080/api/v1/admin/user/register",
+      "/api/v1/admin/user/register",
       {
         method: "POST",
         body: JSON.stringify(data),
@@ -231,7 +231,7 @@ export const createStudent = (data) => async (dispatch) => {
 export const deleteStudent = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/user/${id}`, {
+    const res = await fetch(`/api/v1/admin/user/${id}`, {
       method: "DELETE",
       credentials: "include",
     });
@@ -253,7 +253,7 @@ export const statusStudent = (id, status) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/user/status/${id}`,
+      `/api/v1/admin/user/status/${id}`,
       {
         method: "POST",
         credentials: "include",
@@ -280,7 +280,7 @@ export const statusStudent = (id, status) => async (dispatch) => {
 export const adminLogout = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch("http://localhost:8080/api/v1/admin/logout", {
+    const res = await fetch("/api/v1/admin/logout", {
       method: "GET",
       credentials: "include",
     });
@@ -305,7 +305,7 @@ export const adminLogout = () => async (dispatch) => {
 export const getAllStudent = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch("http://localhost:8080/api/v1/admin/user", {
+    const res = await fetch("/api/v1/admin/user", {
       method: "GET",
       credentials: "include",
     });
@@ -326,7 +326,7 @@ export const getAllStudent = () => async (dispatch) => {
 export const getSingleStudent = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/user/${id}`, {
+    const res = await fetch(`/api/v1/admin/user/${id}`, {
       method: "GET",
       credentials: "include",
       headers: { "Content-Type": "application/json" },

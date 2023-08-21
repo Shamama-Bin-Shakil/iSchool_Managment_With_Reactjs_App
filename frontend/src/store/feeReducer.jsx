@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-// const baseURL = "http://localhost:8080/api/v1";
+// const baseURL = "/api/v1";
 
 export const feesSlice = createSlice({
   name: "fees",
@@ -49,7 +49,7 @@ export const getFeesStudent = (id) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
     const res = await fetch(
-      `http://localhost:8080/api/v1/admin/user/feepaid/${id}`,
+      `/api/v1/admin/user/feepaid/${id}`,
       {
         method: "GET",
         credentials: "include",
@@ -71,7 +71,7 @@ export const getFeesStudent = (id) => async (dispatch) => {
 export const FeesPaidStudent = (data) => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const res = await fetch(`http://localhost:8080/api/v1/admin/user/feepaid`, {
+    const res = await fetch(`/api/v1/admin/user/feepaid`, {
       method: "POST",
       credentials: "include",
       headers: { "content-type": "application/json" },

@@ -14,6 +14,7 @@ import {
   IoPeopleOutline,
   IoPersonOutline,
   IoRibbonOutline,
+  IoSchoolOutline,
   IoSendOutline,
   IoSettingsOutline,
   IoSpeedometerOutline,
@@ -49,21 +50,9 @@ const AdminSidebar = (props) => {
   const smallMenu = () => {
     changeMenu.current.classList.toggle("mainActive");
     changeMainSection.current.classList.toggle("active");
-
-    if (localStorage.getItem("SidebarSmall") === "true") {
-      localStorage.setItem("SidebarSmall", false);
-    } else {
-      localStorage.setItem("SidebarSmall", true);
-    }
   };
+  
 
-  useEffect(() => {
-    if (localStorage.getItem("SidebarSmall") === "true") {
-      changeMenu.current.classList.toggle("mainActive");
-      changeMainSection.current.classList.toggle("active");
-    }
-    // dispatch(userLoadData());
-  }, []);
 
   return (
     <>
@@ -158,7 +147,6 @@ const AdminSidebar = (props) => {
 
             <div className="arrowResponsive">
               <span className="icon" onClick={smallMenu}>
-                {/* <IoCaretForwardOutline /> */}
                 <IoArrowForward />
               </span>
             </div>
@@ -226,7 +214,7 @@ const AdminSidebar = (props) => {
             >
               <div className="headingWithIcon">
                 <div className="icon">
-                  <IoCarSportSharp />
+                  <IoSchoolOutline />
                 </div>
                 <h4 className="text">Marks</h4>
               </div>
