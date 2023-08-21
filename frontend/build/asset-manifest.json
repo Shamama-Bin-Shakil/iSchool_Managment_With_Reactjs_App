@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/static/js/main.b0435122.js",
+    "static/media/gallery3.jpg": "/static/media/gallery3.62d3257f30385a252b90.jpg",
+    "static/media/2002.i203.022.online education distant learning cartoon.jpg": "/static/media/2002.i203.022.online education distant learning cartoon.ad2a3cf6a8b4d7d90942.jpg",
+    "static/media/6342501.jpg": "/static/media/6342501.a41f059ca402341b224a.jpg",
+    "static/media/adminlogin.jpg": "/static/media/adminlogin.775f781f439db041e4e0.jpg",
+    "static/media/profile.jpg": "/static/media/profile.de3f2bbff6f544a156bc.jpg",
+    "static/media/6763.jpg": "/static/media/6763.a8ad19faeadcc6cce0bc.jpg",
+    "static/media/20544.jpg": "/static/media/20544.cecfc7feaebb459ac884.jpg",
+    "static/media/2995663.jpg": "/static/media/2995663.305439e00db67fbf1fbf.jpg",
+    "static/media/gallery1.jpg": "/static/media/gallery1.f9ec480e7d2da0af16f4.jpg",
+    "static/media/7495.jpg": "/static/media/7495.3c51ceececac9c29f8d2.jpg",
+    "static/media/gallery2.jpg": "/static/media/gallery2.035d94cc9fb8b639e4a6.jpg",
+    "static/media/notfound.svg": "/static/media/notfound.2733f6bcd9533c2b911e0d65ad9f7e96.svg",
+    "static/media/studentWelcome.svg": "/static/media/studentWelcome.d598fa62405f4fcd7d1d471aff8caef8.svg",
+    "static/media/learning.svg": "/static/media/learning.7023120319d3f06bc27d5606b95fa7c2.svg",
+    "static/media/studentLogin.svg": "/static/media/studentLogin.e79f339a32cbc9b1d1ea68a4b66a1c74.svg",
+    "static/media/c.svg": "/static/media/c.ada65c2edfec07673139c0e137314680.svg",
+    "static/media/book.svg": "/static/media/book.20f69b5bf1aa29213b58480977d65e1e.svg",
+    "static/media/bg2.svg": "/static/media/bg2.43c2cae291e12bb6e70abe5bd1cf466d.svg",
+    "index.html": "/index.html",
+    "main.b0435122.js.map": "/static/js/main.b0435122.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b0435122.js"
+  ]
+}
